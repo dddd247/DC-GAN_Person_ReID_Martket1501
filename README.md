@@ -1,4 +1,4 @@
-# DCGAN-pytorch (LSGAN)
+# DCGAN-pytorch (LSGAN) -- to Market1501
 The code is modified from https://github.com/pytorch/examples/tree/master/dcgan.
 
 ## Prerequisites
