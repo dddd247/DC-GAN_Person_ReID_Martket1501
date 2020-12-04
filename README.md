@@ -3,21 +3,13 @@ The code is modified from https://github.com/pytorch/examples/tree/master/dcgan.
 
 ## Prerequisites
 
-- Python 3.6
+- Python 3.7
 - GPU Memory >= 2G
 
 ## Getting started
 ### Installation
 - Install Pytorch from http://pytorch.org/
-- Install Torchvision from the source
-```
-git clone https://github.com/pytorch/vision
-cd vision
-python setup.py install
-```
 Because pytorch and torchvision are ongoing projects.
-
-Here we noted that our code is tested based on Pytorch 1.0.0 and Torchvision 0.2.0.
 
 ```
 mkdir model
@@ -27,7 +19,7 @@ mkdir result
 
 ### Train
 ```
-python train.py --dataset market --dataroot /home/zzd/market1501/pytorch/train_all  --withoutE --name baseline-lsgan8x8-encode --lsgan --gpu_ids 3
+python train.py --dataset market --dataroot <your_dataset_path>  --withoutE --name model_baseline --lsgan --gpu_ids 0
 ```
 
 `--name` the name of the output model
@@ -48,5 +40,5 @@ Now I set step learning rate schedule. The learning rate drop 0.1 at 40th epoch.
 
 ### Test(Generate Images)
 ```
-python test.py  --name baseline  --batchsize 16  --which_epoch 24
+python test.py  --name baseline  --batchsize 16  --which_epoch 80
 ```
